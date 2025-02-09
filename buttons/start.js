@@ -5,6 +5,7 @@ let buttonStart = document.createElement('div')
 buttonStart.setAttribute('class', 'button')
 let div = document.getElementById('button-start')
 buttonStart.textContent = 'startGame'
+buttonStart.style.left = String(cols * 25) + "px"
 
 ////////////////////////////////////////////////////////////
 ////                                                    ///
