@@ -1,4 +1,4 @@
-import { arrOcupIndex, cols, index, rows } from "../constants.js"
+import { arrOcupIndex, cols, gravity, index, rows } from "../constants.js"
 import { move } from "../gameControl/move.js"
 
 let buttonHund = document.createElement('div')
@@ -13,10 +13,10 @@ buttonHund.addEventListener('click', () => {
     let i =index
     let int_ = setInterval(()=>{
         count++
-        move(i)
+        move(i,name)
         if(count == 1000){
             console.log('finished 100 times--->');clearInterval(int_)}   
-    },50)
+    },rows*gravity+2)
     
 
    

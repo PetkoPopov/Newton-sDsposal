@@ -1,6 +1,6 @@
-import { arrOcupIndex, cols, rows } from "../constants.js"
+import { arrOcupIndex, cols, gravity, rows } from "../constants.js"
 
-function move(i) {
+function move(i,name) {
 
     let emptySqr
     let interval = setInterval(() => {
@@ -16,7 +16,8 @@ function move(i) {
         }
         else if(rnd == 2) {
             i = i + cols - 1
-        }else{
+        }
+        else{
             i= i +cols
         }
         
@@ -24,7 +25,7 @@ function move(i) {
         if (!arrOcupIndex.includes(indexTmp)) {
             emptySqr = indexTmp
         }
-        
+
         if (i > rows * cols) {
             arrOcupIndex.push(emptySqr)
     
@@ -40,7 +41,7 @@ function move(i) {
         tds[indexTmp].style.backgroundColor = 'aqua'
         
 
-    }, 50)
+    }, gravity)
 }
 export {
     move
