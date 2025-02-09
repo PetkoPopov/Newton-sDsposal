@@ -1,0 +1,17 @@
+
+body{
+background-color: rgb(57, 155, 241);
+}
+table{
+    background-color: aqua;
+    border:'7px solid black'
+}
+td{
+    border-color: brown;
+    
+}
+.button{
+    background-color: burlywood;
+    border-color: cadetblue;
+    box-shadow: 10px 7 px green;
+}
