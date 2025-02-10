@@ -1,4 +1,4 @@
-import { arrOcupIndex, cols, gravity, index, rows } from "../constants.js"
+import { amountHund, arrOcupIndex, cols, gravity, index, rows } from "../constants.js"
 import { move } from "../gameControl/move.js"
 import { bonunsSound } from "../sounds/playSounds.js/playSound.js"
 
@@ -15,7 +15,7 @@ buttonHund.addEventListener('click', () => {
     let int_ = setInterval(()=>{
         count++
         move(i)
-        if(count == 10){
+        if(count == amountHund){
             
             console.log('finished 100 times--->');clearInterval(int_)}   
     },rows*gravity+2)
