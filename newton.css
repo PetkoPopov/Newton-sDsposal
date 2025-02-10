@@ -1,6 +1,8 @@
 
 body{
 background-color: rgb(57, 155, 241);
+display: flex;
+flex-wrap: wrap;
 }
 table{
     background-color: aqua;
