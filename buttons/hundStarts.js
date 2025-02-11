@@ -9,7 +9,8 @@ buttonHund.textContent = '100 Start'
 buttonHund.style.top = "150px"
 buttonHund.style.left= String(cols*25)+"px"
 buttonHund.addEventListener('click', () => {
-     
+    buttonHund.style.top = "160px"
+    buttonHund.style.left = String(cols * 26) + "px"
     let count = 0
     let i =index
     let int_ = setInterval(()=>{
@@ -21,7 +22,10 @@ buttonHund.addEventListener('click', () => {
     },rows*gravity+2)
     
 
-
+setTimeout(()=>{
+    buttonHund.style.top = "150px"
+    buttonHund.style.left = String(cols * 25) + "px"
+},500)
    
 })
 
