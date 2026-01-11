@@ -2,34 +2,37 @@ import { amountHund, arrOcupIndex, cols, gravity, index, rows } from "../constan
 import { move } from "../gameControl/move.js"
 import { bonunsSound } from "../sounds/playSounds.js/playSound.js"
 
-let buttonHund = document.createElement('div')
-buttonHund.setAttribute('class', 'button')
-let div = document.getElementById('button-start')
-buttonHund.textContent = '100 Start'
+let buttonHund = document.getElementById('hundStarts')
 buttonHund.style.top = "150px"
-buttonHund.style.left= String(cols*25)+"px"
+buttonHund.textContent = '100 Hund Starts'
+buttonHund.style.left= String(cols*35)+"px"
 buttonHund.addEventListener('click', () => {
     buttonHund.style.top = "160px"
-    buttonHund.style.left = String(cols * 26) + "px"
+    buttonHund.style.left = String(cols * 37) + "px"
     let count = 0
-    let i =index
+   let i = index+Math.floor(Math.random()*2)
+
     let int_ = setInterval(()=>{
         count++
-        move(i)
+        if(Math.floor(Math.random()*2)==0 ){
+            i = index
+        }else{
+            i = index-1
+        }            
+            move(i)
         if(count == amountHund){
             
             console.log('finished 100 times--->');clearInterval(int_)}   
-    },rows*gravity+2)
+    },1000)
     
 
 setTimeout(()=>{
     buttonHund.style.top = "150px"
-    buttonHund.style.left = String(cols * 25) + "px"
+    buttonHund.style.left = String(cols * 35) + "px"
 },500)
    
 })
 
-div.appendChild(buttonHund)
 export {
     buttonHund
 }
